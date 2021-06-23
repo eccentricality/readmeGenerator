@@ -1,6 +1,31 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  const licenseName = license.license[0];
+  let licenseLink = '';
+
+  if (licenseName === 'Apache 2.0') {
+    licenseLink = `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`
+  };
+
+  if (licenseName === 'Boost Software License 1.0') {
+    licenseLink = `![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)`
+  };
+
+  if (licenseName === 'BSD 3-Clause License') {
+    licenseLink = `![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)`
+  };
+
+  if (licenseName === 'BSD 2-Clause License') {
+    licenseLink = `![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)`
+  };
+
+  if (licenseName === '') {
+    licenseLink = ``
+  };
+
+  return licenseLink;
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
