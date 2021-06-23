@@ -14,7 +14,7 @@ const questions = [
                 return true
             }
             else {
-                return 'Please input a proper title!'
+                return 'Please submit a proper input!'
             }}
     },
     {
@@ -26,19 +26,19 @@ const questions = [
                 return true
             }
             else {
-                return 'Please write a short description!'
+                return 'Please submit a proper input!'
             }}
     },
     {
         type: 'input',
-        message: 'What are some lessons you learned?',
-        name: 'projectLessons',
+        message: 'What is your table of contents?',
+        name: 'projectTable',
         validate: (value) => { 
             if (value) {
                 return true
             }
             else {
-                return 'Please list some lessons learned!'
+                return 'Please submit a proper input!'
             }}
     },
     {
@@ -50,7 +50,7 @@ const questions = [
                 return true
             }
             else {
-                return 'Please link your deployment here!'
+                return 'Please submit a proper input!'
             }}
     }
 ];
