@@ -2,12 +2,14 @@
 function init() {
 
 // TODO: Include packages needed for this application
+// all required packages imported for use
 const inquirer = require('inquirer')
 const fs = require('fs')
 const generate = require('./utils/generateMarkdown')
 const path = require('path')
 
 // TODO: Create an array of questions for user input
+// list of questions to be asked per readme guidelines linked to markdown via the name of the object.
 const questions = [
     {
         type: 'input',
@@ -58,12 +60,13 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
+// creates a readme called 'README.md' in the folder
 inquirer.prompt(questions)
 .then((response) => {
-    return fs.writeFileSync(path.join (process.cwd(), '${response.projectTitle}.md'), generate(response))
+    return fs.writeFileSync(path.join (process.cwd(), 'README.md'), generate(response))
 })
 
 }
 
-// Function call to initialize app
+// function call to initialize app
 init();

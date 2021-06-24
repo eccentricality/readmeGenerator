@@ -1,35 +1,20 @@
-# Some project
 
-  ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+# Read Me Generator
 
-  ## Description
-  It does things
+User can run index.js via node in order to answer a series of questions and generates a readme in folder with contents plugged into a pre-generated format with user's input.
 
-  ## Table of Contents
-    1. [Installation](#Installation)
-    2. [Usage](#Usage)
-    3. [License](#License)
-    4. [Contributing](#Contributing)
-    5. [Tests](#Tests)
-    6. [Questions](#Questions)
 
-  ## Installation
-  Go here to click on this and download it
+## Demo
 
-  ## Usage
-  You just do by clicking and typing
+![ Alt text](./demo.gif)
 
-  ## License
-  This project is covered under Apache 2.0 license.
-  ![License](https://opensource.org/licenses/Apache-2.0)
+  
+## Lessons Learned
 
-  ## Contributing
-  Contributions are limited to certain parameters
+The coding part of it was simple enough in hindsight, but wrapping my head around the "backend" portion of the course took a bit to wrap my head around. I eventually understood how all the packages and script files work with each other to act as a cool readme generator. It is rudimentary but gets the job done!
+  
+## Deployment
 
-  ## Tests
-  Test it by 1 2 3
+No deployment link here, see the included gif for demonstration.
 
-  ## Questions
-  Find me at: https://github.com/eccentricality
-
-  Email me with additional questions at: jason@fakemail.com
+  

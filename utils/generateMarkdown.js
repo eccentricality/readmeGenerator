@@ -1,5 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+// created function to do exactly as asked, one each for the badge, license link, and a short blurb to describe which license the project is covered under.
 function renderLicenseBadge(data) {
   const licenseName = data.projectLicenses[0];
   let badgeLink = '';
@@ -34,19 +35,19 @@ function renderLicenseLink(data) {
   let licenseLink = '';
 
   if (licenseName === 'Apache 2.0') {
-    licenseLink = `![License](https://opensource.org/licenses/Apache-2.0)`
+    licenseLink = `https://opensource.org/licenses/Apache-2.0`
   };
 
   if (licenseName === 'Boost Software License 1.0') {
-    licenseLink = `![License](https://www.boost.org/LICENSE_1_0.txt)`
+    licenseLink = `https://www.boost.org/LICENSE_1_0.txt`
   };
 
   if (licenseName === 'BSD 3-Clause License') {
-    licenseLink = `![License](https://opensource.org/licenses/BSD-3-Clause)`
+    licenseLink = `https://opensource.org/licenses/BSD-3-Clause`
   };
 
   if (licenseName === 'BSD 2-Clause License') {
-    licenseLink = `![License](https://opensource.org/licenses/BSD-2-Clause)`
+    licenseLink = `https://opensource.org/licenses/BSD-2-Clause`
   };
 
   if (licenseName === '') {
@@ -86,6 +87,7 @@ function renderLicenseSection(data) {
 }
 
 // TODO: Create a function to generate markdown for README
+// takes the data and plugs a pre-generated content as per guidelines, filled by the content user input via index.js
 function generateMarkdown(data) {
   return `## Title: ${data.projectTitle}
 
