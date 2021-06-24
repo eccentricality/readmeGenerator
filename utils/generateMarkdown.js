@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  const licenseName = license.license[0];
+function renderLicenseBadge(data) {
+  const licenseName = data.projectLicenses[0];
   let badgeLink = '';
 
   if (licenseName === 'Apache 2.0') {
@@ -29,8 +29,8 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  const licenseName = license.license[0];
+function renderLicenseLink(data) {
+  const licenseName = data.projectLicenses[0];
   let licenseLink = '';
 
   if (licenseName === 'Apache 2.0') {
@@ -58,12 +58,70 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(data) {
+  const licenseName = data.projectLicenses[0];
+  let licenseLink = '';
+
+  if (licenseName === 'Apache 2.0') {
+    licenseLink = `This project is covered under Apache 2.0 license.`
+  };
+
+  if (licenseName === 'Boost Software License 1.0') {
+    licenseLink = `This project is covered under Boost Software License 1.0' license.`
+  };
+
+  if (licenseName === 'BSD 3-Clause License') {
+    licenseLink = `This project is covered under BSD 3-Clause License license.`
+  };
+
+  if (licenseName === 'BSD 2-Clause License') {
+    licenseLink = `This project is covered under BSD 2-Clause License license.`
+  };
+
+  if (licenseName === '') {
+    licenseLink = ``
+  };
+
+  return licenseLink;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `## Title: ${data.projectTitle}
 
+  ${renderLicenseBadge(data)}
+
+  ## Description
+  ${data.projectDescription}
+
+  ## Table of Contents
+    1. [Installation](#Installation)
+    2. [Usage](#Usage)
+    3. [License](#License)
+    4. [Contributing](#Contributing)
+    5. [Tests](#Tests)
+    6. [Questions](#Questions)
+
+  ## Installation
+  ${data.projectInstructions}
+
+  ## Usage
+  ${data.projectUsage}
+
+  ## License
+  ${renderLicenseSection(data)}
+  ${renderLicenseLink(data)}
+
+  ## Contributing
+  ${data.projectContributions}
+
+  ## Tests
+  ${data.projectTests}
+
+  ## Questions
+  Find me at: https://github.com/${data.projectGithubUsername}
+
+  Email me with additional questions at: ${data.projectEmail}
 `;
 }
 

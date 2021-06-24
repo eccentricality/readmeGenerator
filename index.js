@@ -60,7 +60,7 @@ const questions = [
 // TODO: Create a function to write README file
 inquirer.prompt(questions)
 .then((response) => {
-    return fs.writeFileSync(path.join (process.cwd(), 'README.md'), generate(response))
+    return fs.writeFileSync(path.join (process.cwd(), '${response.projectTitle}.md'), generate(response))
 })
 
 }
