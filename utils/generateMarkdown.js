@@ -2,22 +2,51 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   const licenseName = license.license[0];
-  let licenseLink = '';
+  let badgeLink = '';
 
   if (licenseName === 'Apache 2.0') {
-    licenseLink = `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`
+    badgeLink = `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`
   };
 
   if (licenseName === 'Boost Software License 1.0') {
-    licenseLink = `![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)`
+    badgeLink = `![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)`
   };
 
   if (licenseName === 'BSD 3-Clause License') {
-    licenseLink = `![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)`
+    badgeLink = `![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)`
   };
 
   if (licenseName === 'BSD 2-Clause License') {
-    licenseLink = `![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)`
+    badgeLink = `![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)`
+  };
+
+  if (licenseName === '') {
+    badgeLink = ``
+  };
+
+  return badgeLink;
+}
+
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+function renderLicenseLink(license) {
+  const licenseName = license.license[0];
+  let licenseLink = '';
+
+  if (licenseName === 'Apache 2.0') {
+    licenseLink = `![License](https://opensource.org/licenses/Apache-2.0)`
+  };
+
+  if (licenseName === 'Boost Software License 1.0') {
+    licenseLink = `![License](https://www.boost.org/LICENSE_1_0.txt)`
+  };
+
+  if (licenseName === 'BSD 3-Clause License') {
+    licenseLink = `![License](https://opensource.org/licenses/BSD-3-Clause)`
+  };
+
+  if (licenseName === 'BSD 2-Clause License') {
+    licenseLink = `![License](https://opensource.org/licenses/BSD-2-Clause)`
   };
 
   if (licenseName === '') {
@@ -26,10 +55,6 @@ function renderLicenseBadge(license) {
 
   return licenseLink;
 }
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
